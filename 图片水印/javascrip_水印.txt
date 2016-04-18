@@ -1,0 +1,5 @@
+http://www.cnblogs.com/GongQi/p/4074609.html  javascript 实现水印
+
+https://segmentfault.com/a/1190000003963759   画布实现水印
+
+http://blog.it985.com/10155.html  JS打印背景水印图片【原创】

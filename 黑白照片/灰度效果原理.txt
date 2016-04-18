@@ -1,0 +1,64 @@
+http://www.zhangxinxu.com/wordpress/2012/08/css-svg-filter-image-grayscale/
+http://james.padolsey.com/javascript/grayscaling-in-non-ie-browsers/
+
+
+方法1：支持IE
+
+<!DOCTYPE html PUBLIC “-//W3C//DTD XHTML 1.0 Transitional//EN” “http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd”>
+
+<html xmlns=”http://www.w3.org/1999/xhtml”>
+
+<style>
+
+html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);}
+
+</style>
+
+说明：此方法支持IE，不支持Firefox和Chrome等非IE内核浏览器。
+
+
+方法2：支持IE
+
+body {filter:gray}
+
+说明：此方法支持IE，不支持Firefox和Chrome等非IE内核浏览器。
+提示：虽然这个方法代码量最小，但是效果却不好，而且网页也比较卡。
+
+
+
+方法3：同时支持IE和Chrome
+
+<style>
+
+html {overflow-y:scroll;filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(100%);}
+
+</style>
+
+说明：此方法支持IE浏览器、Safari和Chrome等浏览器，但是不支持Firefox浏览器。
+
+
+
+方法4：使用grayscale.js插件
+
+使用grayscale.js插件。这个插件是模拟IE的filter:progid方，官网地址在：
+
+http://james.padolsey.com/javascript/grayscaling-in-non-ie-browsers/
+
+使用方法：
+
+<script src=”http://james.padolsey.com/demos/grayscale/grayscale.js” type=”text/javascript”></script>
+
+<script type=”text/javascript”>
+
+window.onload=function(){
+
+grayscale(document.body);
+
+}
+
+</script>
+
+说明：支持IE、Safari、Chrome、Opera和Firefox等浏览器。
+问题：这个在IE下也挺占资源的。
+
+建议：使用方法3，虽然不支持更多的浏览器，但是稳定、速度快，而且资源占用小。
